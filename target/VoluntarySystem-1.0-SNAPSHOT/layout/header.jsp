@@ -28,7 +28,7 @@
 <%--                </div>--%>
 <%--            </li>--%>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="ArticleDropdown" role="button" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="#" id="HelpSeekerDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     求助者
                 </a>
@@ -40,6 +40,16 @@
 <%--                    <div class="dropdown-divider"></div>--%>
                     <a class="dropdown-item" href="addHelpRequest">发布求助</a>
                     <a class="dropdown-item" href="manageMyHelpRequests">管理我的求助</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="VolunteerTeamDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    志愿团体
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="manageHelpRequests">选定求助记录</a>
                 </div>
             </li>
 

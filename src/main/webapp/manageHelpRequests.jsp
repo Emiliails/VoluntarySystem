@@ -23,10 +23,7 @@
 <body>
 <div class="container">
     <%@include file="layout/header.jsp" %>
-    <%--<%--%>
-    <%--    List<Article> articleList = (List<Article>) request.getAttribute("articleList");--%>
-    <%--%>--%>
-    <h1>管理我的求助</h1>
+    <h1>选定求助信息</h1>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -35,7 +32,7 @@
             <th>求助时间</th>
             <th>求助内容</th>
             <th>求助地点</th>
-            <th>接受团队ID</th>
+            <th>选定求助信息</th>
         </tr>
         </thead>
         <tbody>
@@ -46,7 +43,7 @@
                 <td>${helpRequest.helpRequestCreateTime}</td>
                 <td>${helpRequest.helpRequestContent}</td>
                 <td>${helpRequest.helpRequestLocation}</td>
-                <td>${helpRequest.volunteerTeamId==0?"暂无团队接受":helpRequest.volunteerTeamId}</td>
+                <td><a href="selectHelpRequest?helpRequestId=${helpRequest.helpRequestId}">选定</a></td>
             </tr>
         </c:forEach>
         </tbody>

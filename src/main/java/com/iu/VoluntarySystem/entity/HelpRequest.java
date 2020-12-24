@@ -6,6 +6,7 @@ public class HelpRequest {
     private String helpRequestCreateTime;
     private String helpRequestLocation;
     private String helpRequestContent;
+    private int volunteerTeamId;
 
     public int getHelpRequestId() {
         return helpRequestId;
@@ -45,5 +46,13 @@ public class HelpRequest {
 
     public void setHelpRequestContent(String helpRequestContent) {
         this.helpRequestContent = helpRequestContent;
+    }
+
+    public int getVolunteerTeamId() {
+        return volunteerTeamId;
+    }
+
+    public void setVolunteerTeamId(int volunteerTeamId) {
+        this.volunteerTeamId = volunteerTeamId;
     }
 }

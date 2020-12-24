@@ -15,4 +15,19 @@ public class HelpRequestService {
         HelpRequestDao helpRequestDao = new HelpRequestDao();
         return helpRequestDao.findByHelpSeekerId(helpSeekerId);
     }
+
+    public void volunteerTeamSelectHelpRequest(int volunteerTeamId, int helpRequestId) {
+        HelpRequestDao helpRequestDao = new HelpRequestDao();
+        helpRequestDao.volunteerTeamSelectHelpRequest(volunteerTeamId,helpRequestId);
+    }
+
+    public List<HelpRequest> findAll() {
+        HelpRequestDao helpRequestDao = new HelpRequestDao();
+        return helpRequestDao.findAll();
+    }
+
+    public List<HelpRequest> findSelectableHelpRequest() {
+        HelpRequestDao helpRequestDao  = new HelpRequestDao();
+        return  helpRequestDao.findSelectableHelpRequest();
+    }
 }

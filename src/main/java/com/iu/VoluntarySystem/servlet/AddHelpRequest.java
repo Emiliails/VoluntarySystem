@@ -36,54 +36,7 @@ public class AddHelpRequest extends HttpServlet {
 
         //2. 检查数据
 
-//        ArticleService articleService = new ArticleService();
-//        ArticleTypeService articleTypeService = new ArticleTypeService();
-//
-//        //2.1 检查文章是否为空
-//        if (request.getParameter("articleName").equals("")) {
-//            request.setAttribute("article", article);
-//            request.setAttribute("userName", userName);
-//            request.setAttribute("errorMessage", "文章名不能为空！");
-//            //获取文章类型列表
-//
-//            List<ArticleType> articleTypeList = articleTypeService.findByUserName(userName);
-//            System.out.println(articleTypeList);
-//            request.setAttribute("articleTypeList", articleTypeList);
-//
-//            request.getRequestDispatcher("/addArticle.jsp").forward(request, response);
-//            return;
-//        }
-//        System.out.println(request.getParameter("articleTypeName"));
-////        检查文章类型是否存在
-//        if (request.getParameter("articleTypeName")==null) {
-//            request.setAttribute("article", article);
-//            request.setAttribute("userName", userName);
-//            request.setAttribute("errorMessage", "文章类型不能为空！");
-//            //获取文章类型列表
-//            List<ArticleType> articleTypeList = articleTypeService.findByUserName(userName);
-//            System.out.println(articleTypeList);
-//            request.setAttribute("articleTypeList", articleTypeList);
-//
-//            request.getRequestDispatcher("/addArticle.jsp").forward(request, response);
-//            return;
-//        }
-//
-//        //3.-1 检查文章内容是否存在
-//        if (request.getParameter("articleContent").equals("")) {
-//            request.setAttribute("article", article);
-//            request.setAttribute("userName", userName);
-//            request.setAttribute("errorMessage", "文章内容不能为空！");
-//            //获取文章类型列表
-//            List<ArticleType> articleTypeList = articleTypeService.findByUserName(userName);
-//            System.out.println(articleTypeList);
-//            request.setAttribute("articleTypeList", articleTypeList);
-//
-//            request.getRequestDispatcher("/addArticle.jsp").forward(request, response);
-//            return;
-//        }
 
-        //3. 新加文章
-//        article = articleService.addArticle(article);
         HelpRequestService helpRequestService = new HelpRequestService();
         helpRequestService.addHelpRequest(helpRequest);
 

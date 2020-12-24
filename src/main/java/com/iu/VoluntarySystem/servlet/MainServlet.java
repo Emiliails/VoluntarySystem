@@ -15,6 +15,7 @@ public class MainServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.setAttribute("helpSeekerId", 1);
+        session.setAttribute("volunteerTeamId",1);
         request.getRequestDispatcher("/main.jsp").forward(request, response);
     }
 

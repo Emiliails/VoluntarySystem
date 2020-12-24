@@ -17,8 +17,6 @@
     <meta http-equiv="expires" content="0">
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="This is my page">
-<%--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"--%>
-<%--          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">--%>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 
@@ -37,6 +35,7 @@
             <th>求助时间</th>
             <th>求助内容</th>
             <th>求助地点</th>
+            <th>接受团队ID</th>
         </tr>
         </thead>
         <tbody>
@@ -47,6 +46,7 @@
                 <td>${helpRequest.helpRequestCreateTime}</td>
                 <td>${helpRequest.helpRequestContent}</td>
                 <td>${helpRequest.helpRequestLocation}</td>
+                <td>${helpRequest.volunteerTeamId==0?"暂无团队接受":helpRequest.volunteerTeamId}</td>
             </tr>
         </c:forEach>
         </tbody>
