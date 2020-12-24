@@ -1,0 +1,30 @@
+package com.iu.VoluntarySystem.servlet;
+
+import com.iu.VoluntarySystem.entity.HelpRequest;
+import com.iu.VoluntarySystem.service.HelpRequestService;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+
+@WebServlet("/manageMyHelpRequests")
+public class ManageMyHelpRequests extends HttpServlet {
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        int helpSeekerId = (int) request.getSession().getAttribute("helpSeekerId");
+
+        HelpRequestService helpRequestService = new HelpRequestService();
+        List<HelpRequest> helpRequests= helpRequestService.findByHelpSeekerId(helpSeekerId);
+        request.setAttribute("helpRequests",helpRequests);
+
+        request.getRequestDispatcher("/manageMyHelpRequests.jsp").forward(request, response);
+    }
+
+}
